@@ -3,394 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subho Vijaya Dashami Wishes</title>
+    <title>Subho Vijaya Dashami</title>
     
-    <!-- OpenGraph Meta Tags for Rich Social Media Previews -->
-    <meta property="og:title" content="শুভ বিজয়া দশমীর আন্তরিক প্রীতি ও শুভেচ্ছা!">
-    <meta property="og:description" content="Click here to see a special Subho Vijaya Dashami greeting made for you!">
-    <meta property="og:image" content="https://res.cloudinary.com/dva8bpest/image/upload/q_auto/f_auto/v1787396399/vijaya-dashami_yusfyz.jpg">
-    <meta property="og:type" content="website">
-
-    <!-- Google AdSense Script -->
+    <!-- Google AdSense Verification Code -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5855481229492425" crossorigin="anonymous"></script>
-
+    
     <style>
-        * {
+        body { 
+            text-align: center; 
+            font-family: sans-serif; 
+            background-color: #ffecd2; 
+            padding: 15px; 
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
-        body {
-            background: radial-gradient(circle, #fcf5e3 0%, #dfbfa1 50%, #4a0e17 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* --- Screens --- */
-        .screen {
-            display: none;
-            width: 100%;
-            min-height: 100vh;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-size: cover;
-            background-position: center;
-            padding: 20px;
-        }
-
-        .active-screen {
-            display: flex !important;
-            flex-direction: column;
-        }
-
-        #input-screen {
-            background-image: linear-gradient(rgba(74, 14, 23, 0.8), rgba(74, 14, 23, 0.8)), url('https://res.cloudinary.com/dva8bpest/image/upload/q_auto/f_auto/v1787396399/vijaya-dashami_yusfyz.jpg');
-        }
-
-        /* --- Containers --- */
-        .container, .input-container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px;
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(74, 14, 23, 0.5);
-            border: 2px solid #b82d38;
-            max-width: 100%;
-            width: 650px;
-            animation: fadeIn 1.5s ease-in-out;
-            position: relative;
-            z-index: 10;
-        }
-
-        .input-container h2 { color: #b82d38; margin-bottom: 10px; font-size: 1.8rem; }
-        .input-container p { margin-bottom: 20px; font-weight: bold; color: #555; }
-        .input-container input {
-            width: 90%; padding: 15px; font-size: 1.2rem;
-            border: 2px solid #d4a373; border-radius: 10px;
-            margin-bottom: 20px; text-align: center; outline: none;
-            text-transform: capitalize;
-        }
-
-        button {
-            background: #b82d38; color: white; border: none;
-            padding: 15px 40px; font-size: 1.2rem; border-radius: 50px;
-            cursor: pointer; font-weight: bold;
-            box-shadow: 0 5px 15px rgba(184, 45, 56, 0.4); transition: 0.3s;
-        }
-        button:hover { background: #901f28; transform: scale(1.05); }
-
-        /* --- Wish Content --- */
-        .durga-img {
-            width: 100%; max-width: 550px; height: auto;
-            border-radius: 12px; border: 4px solid #b82d38;
-            box-shadow: 0 8px 25px rgba(184, 45, 56, 0.3); margin-bottom: 20px;
-            animation: softPulse 4s infinite alternate;
-        }
-
-        .bengali-title { font-size: 2rem; color: #b82d38; margin-bottom: 10px; font-weight: 800; line-height: 1.3; }
-        .english-title { font-size: 1.5rem; color: #b82d38; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; }
-
-        .message-box {
-            background: #fdf8f5; padding: 15px; border-radius: 10px;
-            border-left: 5px solid #d4a373; margin-bottom: 20px;
-        }
-        .message-box p { font-size: 1.1rem; color: #444; font-weight: 600; line-height: 1.6; margin-bottom: 10px; }
-        .subho-vijaya { color: #d4a373; font-size: 1.6rem; margin-top: 10px; font-weight: bold; }
-
-        /* --- Huge Share Button --- */
-        .share-btn {
-            background: linear-gradient(to right, #b82d38, #ff5e62);
-            padding: 20px; font-size: 1.3rem; width: 100%; margin-bottom: 20px;
-            border-radius: 15px; animation: glowing 1.5s infinite;
-            text-transform: uppercase; box-shadow: 0 10px 25px rgba(184, 45, 56, 0.5);
-        }
-
-        @keyframes glowing {
-            0% { box-shadow: 0 0 5px #b82d38; }
-            50% { box-shadow: 0 0 25px #ff5e62, 0 0 40px #ff5e62; }
-            100% { box-shadow: 0 0 5px #b82d38; }
-        }
-
-        /* --- Flipkart Button --- */
-        .flipkart-btn {
-            background: #2874f0; /* Flipkart Blue */
-            color: white;
-            padding: 15px; font-size: 1.1rem; width: 100%; margin-bottom: 25px;
-            border-radius: 10px; animation: pulseBlue 2s infinite;
-            text-transform: uppercase; box-shadow: 0 5px 15px rgba(40, 116, 240, 0.4);
-            border: 2px solid #ff9f00; /* Flipkart Yellow Border */
-        }
-
-        @keyframes pulseBlue {
-            0% { box-shadow: 0 0 5px #2874f0; }
-            50% { box-shadow: 0 0 20px #2874f0; }
-            100% { box-shadow: 0 0 5px #2874f0; }
-        }
-
-        /* --- Action Boxes (Ads & Links) --- */
-        .action-box {
-            display: none; margin-top: 25px; padding: 20px;
-            background: #fff3e0; border-radius: 12px; border: 2px dashed #d4a373;
+        h1 { color: #d32f2f; margin-top: 30px; font-size: 28px;}
+        #greetingBox, #shareBox { display: none; margin-top: 20px; }
+        
+        input { 
+            padding: 12px; 
+            font-size: 16px; 
+            border-radius: 8px; 
+            border: 2px solid #d32f2f; 
+            width: 80%; 
+            max-width: 300px; 
         }
         
-        .ad-container {
-            margin-top: 15px; padding: 10px; background: #fff;
-            border: 1px solid #eee; border-radius: 8px; min-height: 120px;
-            display: flex; justify-content: center; align-items: center;
+        .action-btn { 
+            padding: 12px 25px; 
+            font-size: 18px; 
+            background-color: #d32f2f; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            margin-top: 15px; 
+            font-weight: bold;
         }
-
-        .action-box input {
-            width: 100%; padding: 12px; margin: 10px 0;
-            border: 1px solid #ccc; border-radius: 5px;
-            text-align: center; font-weight: bold; color: #333; font-size: 1rem;
+        
+        .whatsapp-btn { 
+            background-color: #25D366; 
+            width: 90%;
+            max-width: 300px;
         }
-
-        /* Timer UI */
-        .timer-display {
-            font-size: 1.2rem; font-weight: bold; color: #b82d38;
-            margin: 15px 0; padding: 10px; background: #ffe4e1; border-radius: 8px;
+        
+        .ad-container { 
+            margin: 20px auto; 
+            min-height: 250px;
+            background-color: transparent; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
         }
-
-        #link-tools, #flipkart-instructions { display: none; } 
-
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-        @keyframes softPulse { 0% { transform: scale(1); } 100% { transform: scale(1.02); } }
+        
+        .footer-links { 
+            margin-top: 50px; 
+            font-size: 14px; 
+            padding-bottom: 20px;
+        }
+        .footer-links a { 
+            color: #555; 
+            text-decoration: none; 
+            margin: 0 10px; 
+        }
+        
+        #timerText {
+            font-size: 16px;
+            color: #555;
+            font-weight: bold;
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Working Dhak Music Link from Internet Archive -->
-    <audio id="dhak-audio" loop>
-        <source src="https://ia800902.us.archive.org/28/items/DhakSound/dhak_sound.mp3" type="audio/mpeg">
-    </audio>
+    <!-- Hidden Audio Player -->
+    <audio id="dhakAudio" src="dhak.mp3" loop></audio>
 
-    <div id="input-screen" class="screen">
-        <div class="input-container">
-            <h2>আপনার নাম লিখুন</h2>
-            <p>ENTER YOUR NAME</p>
-            <input type="text" id="visitor-name" placeholder="আপনার নাম / Your Name..." autocomplete="off">
-            <button onclick="startExperience()">এগিয়ে যান / Next</button>
+    <h1>Subho Vijaya Dashami!</h1>
+
+    <!-- First Screen: Name Input or Receiver Button -->
+    <div id="inputBox">
+        <p style="font-size: 18px; color: #333;" id="instructionText">Enter your name to create your greeting:</p>
+        <input type="text" id="userName" placeholder="Type your name here...">
+        <br>
+        <button class="action-btn" id="mainButton" onclick="createGreeting()">Create Greeting</button>
+    </div>
+
+    <!-- Second Screen: Greeting, Ads, and Share Button -->
+    <div id="greetingBox">
+        <h2 id="greetingMessage" style="color: #d32f2f; font-size: 24px;"></h2>
+        
+        <p id="timerText">Please wait <span id="timer" style="color: red; font-size: 20px;">5</span> seconds to unlock the share button...</p>
+
+        <!-- Ad Slot 1 -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5855481229492425"
+                 data-ad-slot="auto" 
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Ad Slot 2 -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5855481229492425"
+                 data-ad-slot="auto" 
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Hidden Share Button -->
+        <div id="shareBox">
+            <button class="action-btn whatsapp-btn" onclick="shareWhatsApp()">Share on WhatsApp</button>
         </div>
     </div>
 
-    <div id="wish-screen" class="screen">
-        <div class="container">
-            <img class="durga-img" src="https://res.cloudinary.com/dva8bpest/image/upload/q_auto/f_auto/v1787396399/vijaya-dashami_yusfyz.jpg" alt="Subho Vijaya Dashami">
-            
-            <div id="bengali-title" class="bengali-title"></div>
-            <div id="english-title" class="english-title"></div>
-
-            <button class="share-btn" onclick="initiateShare()">
-                <span style="font-size: 1.5rem;">অন্য বন্ধুদের শুভ বিজয়ার শুভেচ্ছা জানান</span><br>
-                <span style="font-size: 1rem; font-weight: normal;">WISH HAPPY DURGA PUJA TO OTHER FRIENDS</span>
-            </button>
-
-            <!-- New Flipkart Grocery Offer Button -->
-            <button class="flipkart-btn" onclick="showFlipkartOffer()">
-                🛒 PURCHASE RICE, DAL AND ALL GROCERY NEEDS AT ₹49 FROM FLIPKART
-            </button>
-            
-            <div class="message-box">
-                <p>এই শুভ দিনটি আপনার এবং আপনার পরিবারের জন্য আনন্দ, শান্তি এবং সুস্বাস্থ্য নিয়ে আসুক।</p>
-                <p style="font-size: 1.05rem; color:#666;">May this auspicious day bring joy, peace, and good health to you and your family.</p>
-                <div class="subho-vijaya">শুভ বিজয়া দশমী! 🙏✨<br><span style="font-size: 1.2rem; color: #b82d38;">SUBHO VIJAYA DASHAMI!</span></div>
-            </div>
-
-            <!-- Share URL Box -->
-            <div class="action-box" id="action-box">
-                <p style="font-weight: bold; color: #b82d38; font-size: 1.2rem;">আপনার লিঙ্ক তৈরি হচ্ছে...</p>
-                
-                <div class="ad-container" id="ad-container">
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-5855481229492425"
-                         data-ad-slot="3138650211"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                </div>
-
-                <div class="timer-display" id="ad-timer-display">লিঙ্ক পেতে অপেক্ষা করুন: <span id="time-left">5</span> সেকেন্ড</div>
-
-                <div id="link-tools">
-                    <p style="font-size: 0.95rem; font-weight: bold; margin-top: 15px;">YOUR LINK IS READY!</p>
-                    <input type="text" id="share-link-input" readonly>
-                    <button onclick="shareToWhatsApp()" style="background: #25D366; color: white; width: 100%; border-radius: 10px; padding: 12px; margin-bottom: 10px; font-weight: bold; font-size: 1.1rem; border: none; cursor: pointer;">
-                        WhatsApp-এ পাঠান / SHARE ON WHATSAPP
-                    </button>
-                    <button onclick="copyLink()" style="background: #007bff; color: white; width: 100%; border-radius: 10px; padding: 12px; font-weight: bold; font-size: 1.1rem; border: none; cursor: pointer;">
-                        লিঙ্ক কপি করুন / COPY LINK
-                    </button>
-                </div>
-            </div>
-
-            <!-- Flipkart Offer Box -->
-            <div class="action-box" id="flipkart-box" style="background: #f0f8ff; border: 2px dashed #2874f0;">
-                <p style="font-weight: bold; color: #2874f0; font-size: 1.2rem;">Unlocking Flipkart Offer...</p>
-                
-                <div class="ad-container" id="flipkart-ad-container">
-                    <!-- Durga Ad Unit reused for Flipkart block -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-5855481229492425"
-                         data-ad-slot="3138650211"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                </div>
-
-                <div class="timer-display" id="flipkart-timer-display" style="color: #2874f0; background: #e1f0ff;">
-                    অফারটি আনলক হতে অপেক্ষা করুন: <span id="flipkart-time-left">5</span> সেকেন্ড
-                </div>
-
-                <div id="flipkart-instructions" style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #ff9f00; margin-top: 15px; text-align: left;">
-                    <h3 style="color: #2874f0; margin-bottom: 10px; text-align: center;">HOW TO REDEEM:</h3>
-                    <ol style="font-weight: bold; color: #444; line-height: 1.8; margin-left: 20px; font-size: 1.05rem;">
-                        <li>OPEN FLIPKART APP OR WEBSITE</li>
-                        <li>SELECT <span style="color: #2874f0;">FLIPKART MINUTES</span> SECTION</li>
-                        <li>TAP ON <span style="color: #ff9f00;">"DEALS STARTING AT ₹49"</span> BANNER AND BUY!</li>
-                    </ol>
-                    <a href="https://www.flipkart.com/" target="_blank" style="display: block; text-align: center; background: #ff9f00; color: white; padding: 15px; font-weight: bold; text-decoration: none; border-radius: 8px; margin-top: 15px; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(255, 159, 0, 0.4);">
-                        OPEN FLIPKART NOW
-                    </a>
-                </div>
-            </div>
-            
-        </div>
+    <div class="footer-links">
+        <a href="about.html">About Us</a> | 
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="contact.html">Contact Us</a>
     </div>
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        let senderName = urlParams.get('from');
+        let sharedNameFromUrl = "";
 
-        if (!senderName) {
-            senderName = "সুশান্ত (Susanta)"; 
+        // Logic for when a friend opens the link you sent them
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            sharedNameFromUrl = urlParams.get('name');
+            
+            if (sharedNameFromUrl) {
+                // Change the first screen to a tap-to-open button so audio can play
+                document.getElementById("instructionText").innerHTML = `You received a special greeting from <b>${sharedNameFromUrl}</b>!`;
+                document.getElementById("userName").style.display = "none";
+                
+                const btn = document.getElementById("mainButton");
+                btn.innerText = "Open Greeting";
+                btn.onclick = openSharedGreeting;
+            }
         }
 
-        let visitorName = "";
-        let shareAdLoaded = false;
-        let flipkartAdLoaded = false;
-        let generatedUrl = "";
-
-        document.getElementById('input-screen').classList.add('active-screen');
-
-        function startExperience() {
-            visitorName = document.getElementById('visitor-name').value.trim();
-            if (visitorName === "") {
-                alert("অনুগ্রহ করে প্রথমে আপনার নাম লিখুন! / Please enter your name first!");
+        function createGreeting() {
+            const name = document.getElementById("userName").value;
+            if (!name) {
+                alert("Please type your name first!");
                 return;
             }
-
-            let audio = document.getElementById('dhak-audio');
-            audio.play().catch(e => console.log("Autoplay prevented by browser security."));
-
-            document.getElementById('bengali-title').innerText = `${senderName} আপনাকে শুভ বিজয়া দশমীর শুভেচ্ছা জানাচ্ছে, ${visitorName}!`;
-            document.getElementById('english-title').innerText = `${senderName} WISHES YOU A HAPPY VIJAYA DASHAMI, ${visitorName}!`;
-
-            document.getElementById('input-screen').classList.remove('active-screen');
-            document.getElementById('wish-screen').classList.add('active-screen');
-            window.scrollTo(0, 0);
+            
+            // Play Audio
+            document.getElementById("dhakAudio").play();
+            
+            // Hide input, show greeting
+            document.getElementById("inputBox").style.display = "none";
+            document.getElementById("greetingBox").style.display = "block";
+            document.getElementById("greetingMessage").innerText = "Subho Vijaya Dashami, " + name + "!";
+            
+            // 5 Second Timer Logic
+            startTimer();
         }
 
-        // Logic for Share Link Generation
-        function initiateShare() {
-            let baseUrl = window.location.href.split('?')[0];
+        function openSharedGreeting() {
+            // Play Audio
+            document.getElementById("dhakAudio").play();
             
-            if (baseUrl.includes("about:srcdoc") || baseUrl.includes("null") || baseUrl.startsWith("file://")) {
-                baseUrl = "https://yourwebsite.com/vijaya"; 
-            }
+            // Hide input, show greeting
+            document.getElementById("inputBox").style.display = "none";
+            document.getElementById("greetingBox").style.display = "block";
+            document.getElementById("greetingMessage").innerText = "Subho Vijaya Dashami to you from " + sharedNameFromUrl + "!";
             
-            generatedUrl = `${baseUrl}?from=${encodeURIComponent(visitorName)}`;
-            document.getElementById('share-link-input').value = generatedUrl;
+            // Remove timer for friends receiving the link
+            document.getElementById("timerText").style.display = "none";
+            document.getElementById("shareBox").style.display = "block";
+        }
 
-            // Close Flipkart box if open
-            document.getElementById('flipkart-box').style.display = 'none';
-
-            const actionBox = document.getElementById('action-box');
-            actionBox.style.display = 'block';
-
-            if (!shareAdLoaded) {
-                try { (adsbygoogle = window.adsbygoogle || []).push({}); shareAdLoaded = true; } catch (e) {}
-            }
-            
-            actionBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
-
+        function startTimer() {
             let timeLeft = 5;
-            const timerElement = document.getElementById('time-left');
-            const displayBox = document.getElementById('ad-timer-display');
-            const toolsBox = document.getElementById('link-tools');
-            
-            displayBox.style.display = 'block';
-            toolsBox.style.display = 'none';
-            timerElement.innerText = timeLeft;
-
-            const timer = setInterval(() => {
+            const timerInterval = setInterval(() => {
                 timeLeft--;
-                timerElement.innerText = timeLeft;
+                document.getElementById("timer").innerText = timeLeft;
+                
                 if (timeLeft <= 0) {
-                    clearInterval(timer);
-                    displayBox.style.display = 'none';
-                    toolsBox.style.display = 'block';
+                    clearInterval(timerInterval);
+                    document.getElementById("timerText").style.display = "none";
+                    document.getElementById("shareBox").style.display = "block";
                 }
             }, 1000);
         }
 
-        // Logic for Flipkart Offer Block
-        function showFlipkartOffer() {
-            // Close Share box if open
-            document.getElementById('action-box').style.display = 'none';
-
-            const flipkartBox = document.getElementById('flipkart-box');
-            flipkartBox.style.display = 'block';
-
-            if (!flipkartAdLoaded) {
-                try { (adsbygoogle = window.adsbygoogle || []).push({}); flipkartAdLoaded = true; } catch (e) {}
-            }
-
-            flipkartBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
-
-            let timeLeft = 5;
-            const timerElement = document.getElementById('flipkart-time-left');
-            const displayBox = document.getElementById('flipkart-timer-display');
-            const instructionsBox = document.getElementById('flipkart-instructions');
-
-            displayBox.style.display = 'block';
-            instructionsBox.style.display = 'none';
-            timerElement.innerText = timeLeft;
-
-            const timer = setInterval(() => {
-                timeLeft--;
-                timerElement.innerText = timeLeft;
-                if (timeLeft <= 0) {
-                    clearInterval(timer);
-                    displayBox.style.display = 'none';
-                    instructionsBox.style.display = 'block';
-                }
-            }, 1000);
-        }
-
-        function shareToWhatsApp() {
-            const msg = encodeURIComponent(`${visitorName} আপনাকে শুভ বিজয়া দশমীর শুভেচ্ছা পাঠিয়েছেন! দেখতে নিচের লিঙ্কে ক্লিক করুন:\n${generatedUrl}`);
-            window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
-        }
-
-        function copyLink() {
-            const copyText = document.getElementById("share-link-input");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); 
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) { alert("লিঙ্ক কপি করা হয়েছে! / Link copied!"); } 
-                else { alert("দয়া করে লিঙ্কটি ম্যানুয়ালি কপি করুন। / Please copy the link manually."); }
-            } catch (err) {
-                alert("দয়া করে লিঙ্কটি ম্যানুয়ালি কপি করুন। / Please copy the link manually.");
-            }
+        function shareWhatsApp() {
+            const name = document.getElementById("userName").value || sharedNameFromUrl;
+            const url = window.location.href.split('?')[0] + "?name=" + encodeURIComponent(name);
+            const text = `*${name}* has sent you a special Vijaya Dashami greeting! Click here to see it: ${url}`;
+            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text));
         }
     </script>
 </body>
